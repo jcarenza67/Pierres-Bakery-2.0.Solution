@@ -1,8 +1,6 @@
-# (PROJECT NAME GOES HERE)
+# (Pierre's Bakery 2.0) 
 
-#### (QUICK DESCRIPTION OF PROJECT GOES HERE)
-
-#### By (NAME GOES HERE)
+#### By (Joseph Wilfong)
 
 ## Technologies Used
 
@@ -15,11 +13,11 @@
 
 ## Description
 
-_DESCRIPTION GOES HERE_
+_A C# web application that allows Pierre to keep track of his vendors and their orders._
 
 ## Links
 
-[This is the link to the Github repository](LINK GOES HERE) 
+[This is the link to the Github repository](https://github.com/jcarenza67/Pierres-Bakery-2.0.Solution) 
 
 
 ## Setup/Installation Requirements
@@ -38,21 +36,21 @@ _DESCRIPTION GOES HERE_
 ```
 6.0.402
 ```
-* _Navigate to the [PROJECT NAME GOES HERE] folder in your terminal_
+* _Navigate to the PierresBakery folder in your terminal_
 * _Then type ***dotnet build*** in your terminal to make sure everything is up to date and there are no errors_
-* _Then launch the webpage by typing ***dotnet watch run --launch-profile "production"*** in the teminal_
+* _Then launch the webpage by typing ***dotnet watch run*** in the teminal_
 * _For issuing and trusting a security certificate, type ***dotnet dev-certs https --trust*** in the terminal and restart your browser_
 * _If you need to install MSTest, type ***dotnet tool install -g dotnet-suggest*** in the terminal_
 * _If you would like to run the tests, type ***dotnet restore*** in the terminal to restore the dependencies that are listed in the .csproj file_
-* _Run the tests by moving into the [PROJECT NAME GOES HERE].Tests folder and typing ***dotnet test*** in the terminal to run tests_
+* _Run the tests by moving into the PierresBakery.Tests folder and typing ***dotnet test*** in the terminal to run tests_
 
 
-***_Please contact me at EMAILGOESHERE@WEBSITE.com if you have any questions, ideas, or concerns._***
+***_Please contact me at josephwilfong91@gmail.com if you have any questions, ideas, or concerns._***
 
 
 ## Known Bugs
 
-* _BUGS GO HERE_
+* _Unknown_
 
 ## License
 
@@ -63,4 +61,4 @@ _The above copyright notice and this permission notice shall be included in all 
 
 _THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
 
-_Copyright (c) _2023_ _NAME GOES HERE_
+_Copyright (c) _2023_ _Joseph Wilfong_
