@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout.cshtml";
+  Layout = "_Layout";
 }
 
 @using PierresBakery.Models;
@@ -11,13 +11,13 @@
   <h3>No vendors have been added.</h3>
 }
 
-@foreach (Vendor vendor in @Model)
+@foreach (Vendor vendor in Model)
 {
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">@Model.Name</h4>
       <p class="card-text">@Model.Description</p>
-      <a href="/" class="btn btn-primary">View Vendor</a>
+      <a href="/vendors" class="btn btn-primary">View Vendor</a>
     </div>
   </div>
 }
