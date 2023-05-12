@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace PierresBakery.Models
@@ -8,13 +9,17 @@ namespace PierresBakery.Models
     public int Id { get; }
     public string Description { get; set; }
     public string Quantity { get; set; }
+    public decimal Price { get; set; }
+    public DateTime Date { get; set; }
     private static List<Order> _instances = new List<Order> { };
 
-    public Order(string type, string description, string quantity)
+    public Order(string type, string description, string quantity, decimal price, DateTime date)
     {
       Type = type;
       Description = description;
       Quantity = quantity;
+      Price = price;
+      Date = date;
       _instances.Add(this);
       Id = _instances.Count;
     }

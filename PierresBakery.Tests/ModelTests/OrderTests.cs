@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("type", "description", "quantity");
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       string description = "description";
-      Order newOrder = new Order("type", description, "quantity");
+      Order newOrder = new Order("type", description, "quantity", 19.99m, DateTime.Now);
 
       string result = newOrder.Description;
 
@@ -35,7 +35,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetId_ReturnsOrderId_Int()
     {
-      Order newOrder = new Order("type", "description", "quantity");
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
 
       int result = newOrder.Id;
 
@@ -45,8 +45,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetAll_ReturnsAllOrderObjects_OrderList()
     {
-      Order newOrder1 = new Order("type01", "description", "quantity");
-      Order newOrder2 = new Order("type02", "description", "quantity");
+      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, DateTime.Now);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
@@ -57,12 +57,23 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
     {
-      Order newOrder1 = new Order("type01", "description", "quantity");
-      Order newOrder2 = new Order("type02", "description", "quantity");
+      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, DateTime.Now);
 
       Order result = Order.Find(2);
 
       Assert.AreEqual(newOrder2, result);  
+    }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_Decimal()
+    {
+      decimal price = 19.99m;
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
+
+      decimal result = newOrder.Price;
+
+      Assert.AreEqual(price, result);
     }
   }
 }

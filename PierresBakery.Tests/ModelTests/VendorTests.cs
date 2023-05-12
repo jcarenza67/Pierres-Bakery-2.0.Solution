@@ -76,7 +76,7 @@ namespace PierresBakery.Tests
         string type = "Order type";
         string description = "Order description";
         string quantity = "Order quantity";
-        Order newOrder = new Order(type, description, quantity);
+        Order newOrder = new Order(type, description, quantity, 19.99m, DateTime.Now);
         string vendorName = "Test Vendor";
         Vendor newVendor = new Vendor(vendorName);
         List<Order> newList = new List<Order> { newOrder };
