@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
       [TestMethod]
       public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
       {
-        Vendor newVendor = new Vendor("test");
+        Vendor newVendor = new Vendor("test", "test");
         Assert.AreEqual(typeof(Vendor), newVendor.GetType());
       }
 
@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
       public void GetName_ReturnsName_String()
       {
         string name = "Test Vendor";
-        Vendor newVendor = new Vendor(name);
+        Vendor newVendor = new Vendor(name, "test");
 
         string result = newVendor.Name;
 
@@ -35,8 +35,7 @@ namespace PierresBakery.Tests
       [TestMethod]
       public void GetId_ReturnsVendorId_Int()
       {
-        string name = "Test Vendor";
-        Vendor newVendor = new Vendor(name);
+        Vendor newVendor = new Vendor("some vendor", "test description");
 
         int result = newVendor.Id;
 
@@ -48,8 +47,10 @@ namespace PierresBakery.Tests
       {
         string name01 = "Gordoughs";
         string name02 = "Janets";
-        Vendor newVendor1 = new Vendor(name01);
-        Vendor newVendor2 = new Vendor(name02);
+        string description01 = "test description";
+        string description02 = "test description";
+        Vendor newVendor1 = new Vendor(name01, description01);
+        Vendor newVendor2 = new Vendor(name02, description02);
         List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
         List<Vendor> result = Vendor.GetAll();
@@ -62,8 +63,10 @@ namespace PierresBakery.Tests
       {
         string name01 = "Dannys";
         string name02 = "Baked Goods";
-        Vendor newVendor1 = new Vendor(name01);
-        Vendor newVendor2 = new Vendor(name02);
+        string description01 = "test description";
+        string description02 = "test description";
+        Vendor newVendor1 = new Vendor(name01, description01);
+        Vendor newVendor2 = new Vendor(name02, description02);
 
         Vendor result = Vendor.Find(2);
 
@@ -78,7 +81,8 @@ namespace PierresBakery.Tests
         string quantity = "Order quantity";
         Order newOrder = new Order(type, description, quantity, 19.99m, "date");
         string vendorName = "Test Vendor";
-        Vendor newVendor = new Vendor(vendorName);
+        string vendorDescription = "Test Vendor Description";
+        Vendor newVendor = new Vendor(vendorName, vendorDescription);
         List<Order> newList = new List<Order> { newOrder };
 
         
