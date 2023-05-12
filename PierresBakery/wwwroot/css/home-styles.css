@@ -1,0 +1,61 @@
+/* Hero Section */
+.hero {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.feature-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feature-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* CTA Section */
+.cta {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}

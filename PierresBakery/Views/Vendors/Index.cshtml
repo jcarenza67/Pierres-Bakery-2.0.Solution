@@ -11,15 +11,22 @@
   <h3>No vendors have been added.</h3>
 }
 
-@foreach (Vendor vendor in Model)
-{
-  <div class="card">
-    <div class="card-body">
-      <h4 class="card-title">@vendor.Name</h4>
-      <p class="card-text">@vendor.Description</p>
-      <a href='/vendors/@vendor.Id' class="btn btn-primary">View Vendor</a>
-    </div>
-  </div>
-}
+<div class="row">
+    @foreach (Vendor vendor in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title">@vendor.Name</h4>
+                    <p class="card-text">@vendor.Description</p>
+                    <a href="/vendors/@vendor.Id" class="btn btn-primary">View Vendor</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
 
-<p><a href="/" class="btn btn-primary">Back home</a></p>
+<p>
+    <a href="/vendors/new" class="btn btn-primary">Add a new vendor</a>
+    <a href="/" class="btn btn-primary">Back home</a>
+</p>
