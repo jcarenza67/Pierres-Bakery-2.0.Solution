@@ -4,32 +4,32 @@
 
 <h1>Create a New Order</h1>
 
-<form action="Create" method="post">
+<form action="/vendors" method="post">
     <input type="hidden" for="VendorId"/>
 
     <div class="form-group">
         <label for="Type">Order Type</label>
-        <input class="form-control" for="Type" />
+        <input class="form-control" name="Type" />
     </div>
 
     <div class="form-group">
         <label for="Description">Order Description</label>
-        <input class="form-control" for="Description" />
+        <input class="form-control" name="Description" />
     </div>
 
     <div class="form-group">
         <label for="Quantity">Order Quantity</label>
-        <input class="form-control" for="Quantity" />
+        <input class="form-control" name="Quantity" />
     </div>
 
     <div class="form-group">
         <label for="Price">Order Price</label>
-        <input class="form-control" for="Price" />
+        <input class="form-control" name="Price" />
     </div>
 
     <div class="form-group">
         <label for="Date">Order Date</label>
-        <input class="form-control" for="Date" />
+        <input class="form-control" name="Date" />
     </div>
 
     <button type="submit" class="btn btn-primary">Create Order</button>
