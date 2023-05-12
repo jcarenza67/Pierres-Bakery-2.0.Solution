@@ -15,7 +15,7 @@ namespace PierresBakery.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(string type, string description, string quantity, int vendorId, decimal price, DateTime date)
+    public ActionResult Create(string type, string description, string quantity, int vendorId, decimal price, string date)
     {
       Vendor vendor = Vendor.Find(vendorId);
       Order newOrder = new Order(type, description, quantity, price, date);

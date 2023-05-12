@@ -7,6 +7,9 @@
 * _C#_
 * _.NET SDK_
 * _MSTest_
+* _Razor_
+* _HTML_
+* _CSS_
 
 
 

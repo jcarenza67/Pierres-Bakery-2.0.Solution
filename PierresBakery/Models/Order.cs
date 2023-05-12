@@ -10,10 +10,10 @@ namespace PierresBakery.Models
     public string Description { get; set; }
     public string Quantity { get; set; }
     public decimal Price { get; set; }
-    public DateTime Date { get; set; }
+    public string Date { get; set; }
     private static List<Order> _instances = new List<Order> { };
 
-    public Order(string type, string description, string quantity, decimal price, DateTime date)
+    public Order(string type, string description, string quantity, decimal price, string date)
     {
       Type = type;
       Description = description;

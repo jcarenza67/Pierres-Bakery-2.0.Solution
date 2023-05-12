@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, "date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       string description = "description";
-      Order newOrder = new Order("type", description, "quantity", 19.99m, DateTime.Now);
+      Order newOrder = new Order("type", description, "quantity", 19.99m, "date");
 
       string result = newOrder.Description;
 
@@ -35,7 +35,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetId_ReturnsOrderId_Int()
     {
-      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, "date");
 
       int result = newOrder.Id;
 
@@ -45,8 +45,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetAll_ReturnsAllOrderObjects_OrderList()
     {
-      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, DateTime.Now);
-      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, "date");
+      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, "date");
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
@@ -57,8 +57,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
     {
-      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, DateTime.Now);
-      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder1 = new Order("type01", "description", "quantity", 19.99m, "date");
+      Order newOrder2 = new Order("type02", "description", "quantity", 19.99m, "date");
 
       Order result = Order.Find(2);
 
@@ -69,7 +69,7 @@ namespace PierresBakery.Tests
     public void GetPrice_ReturnsPrice_Decimal()
     {
       decimal price = 19.99m;
-      Order newOrder = new Order("type", "description", "quantity", 19.99m, DateTime.Now);
+      Order newOrder = new Order("type", "description", "quantity", 19.99m, "date");
 
       decimal result = newOrder.Price;
 
