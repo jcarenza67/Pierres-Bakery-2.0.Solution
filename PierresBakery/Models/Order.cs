@@ -1,6 +1,6 @@
-namespace ProjectName.Models
+namespace PierresBakery.Models
 {
-  public class ClassName
+  public class Order
   {
     public string PropertyName { get; set; }
   }
