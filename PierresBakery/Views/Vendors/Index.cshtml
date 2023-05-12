@@ -1,0 +1,37 @@
+@model List<PierresBakery.Models.Vendor>
+
+@{
+    Layout = "_Layout";
+}
+@using PierresBakery.Models;
+
+<h1>Vendors</h1>
+
+@if (Model.Count > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Vendor Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Vendor vendor in Model)
+            {
+                <tr>
+                    <td>@vendor.Name</td>
+                    <td>
+                        <a href="/vendors/@vendor.Id">View Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No vendors found.</p>
+}
+
+<a href="/vendors/create">Create New Vendor</a>

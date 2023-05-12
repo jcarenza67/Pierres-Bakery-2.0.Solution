@@ -1,0 +1,46 @@
+@model PierresBakery.Models.Vendor
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Vendor Details</h1>
+
+<div>
+    <h3>Vendor Information</h3>
+    <p><strong>Vendor Name:</strong> @Model.Name</p>
+    <!-- Include additional vendor details if needed -->
+</div>
+
+<!-- Display order information if available -->
+@if (Model.Orders.Count > 0)
+{
+    <div>
+        <h3>Orders</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order Type</th>
+                    <th>Description</th>
+                    <!-- Include additional order details if needed -->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.Orders)
+                {
+                    <tr>
+                        <td>@order.Type</td>
+                        <td>@order.Description</td>
+                        <!-- Include additional order details if needed -->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No orders found for this vendor.</p>
+}
+
+<a href="/vendors">Back to Vendor List</a>
