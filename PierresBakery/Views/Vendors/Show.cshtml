@@ -1,46 +1,17 @@
-@model PierresBakery.Models.Vendor
-
 @{
     Layout = "_Layout";
 }
 
-<h1>Vendor Details</h1>
+@using PierresBakery.Models;
 
-<div>
-    <h3>Vendor Information</h3>
-    <p><strong>Vendor Name:</strong> @Model.Name</p>
-    <!-- Include additional vendor details if needed -->
-</div>
+<h3>Here are all the details for this vendor:</h3>
 
-<!-- Display order information if available -->
-@if (Model.Orders.Count > 0)
+<ol>
+@foreach (Order order in Model.Orders)
 {
-    <div>
-        <h3>Orders</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Order Type</th>
-                    <th>Description</th>
-                    <!-- Include additional order details if needed -->
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var order in Model.Orders)
-                {
-                    <tr>
-                        <td>@order.Type</td>
-                        <td>@order.Description</td>
-                        <!-- Include additional order details if needed -->
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+  <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.Type</a></li>
 }
-else
-{
-    <p>No orders found for this vendor.</p>
-}
+</ol>
 
-<a href="/vendors">Back to Vendor List</a>
+<p><a href="/vendors/@Model.Id/orders/new">Add a new order</a></p>
+<p><a href="/vendors">Return to Vendor list</a></p>

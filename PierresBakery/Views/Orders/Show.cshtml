@@ -1,25 +1,21 @@
-@model Dictionary<string, object>
-
 @{
     Layout = "_Layout";
-    var order = (PierresBakery.Models.Order)Model["order"];
-    var vendor = (PierresBakery.Models.Vendor)Model["vendor"];
 }
 
 <h1>Order Details</h1>
 
 <div>
     <h3>Order Information</h3>
-    <p><strong>Order Type:</strong> @order.Type</p>
-    <p><strong>Description:</strong> @order.Description</p>
-    <p><strong>Quantity:</strong> @order.Quantity</p>
-    <p><strong>Price:</strong> @order.Price</p>
-    <p><strong>Date:</strong> @order.Date</p>
+    <p><strong>Order Type:</strong> @Model.Type</p>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>Quantity:</strong> @Model.Quantity</p>
+    <p><strong>Price:</strong> @Model.Price</p>
+    <p><strong>Date:</strong> @Model.Date</p>
 </div>
 
 <div>
     <h3>Vendor Information</h3>
-    <p><strong>Vendor Name:</strong> @vendor.Name</p>
+    <p><strong>Vendor Name:</strong> @Model.Name</p>
 </div>
 
-<a href="/vendors/@vendor.Id">Back to Vendor Details</a>
+<a href='/vendors/@Model["vendor"].Id'>Back to Vendor Details</a>
