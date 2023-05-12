@@ -73,8 +73,10 @@ namespace PierresBakery.Tests
       [TestMethod]
       public void AddOrder_AssociatesOrderWithVendor_OrderList()
       {
+        string type = "Order type";
         string description = "Order description";
-        Order newOrder = new Order(description);
+        string quantity = "Order quantity";
+        Order newOrder = new Order(type, description, quantity);
         string vendorName = "Test Vendor";
         Vendor newVendor = new Vendor(vendorName);
         List<Order> newList = new List<Order> { newOrder };
