@@ -2,6 +2,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
 }
 
 .card-title {
@@ -12,6 +15,7 @@
 .card-text {
   color: #666;
   margin-bottom: 20px;
+  font-size: large;
 }
 
 .btn {

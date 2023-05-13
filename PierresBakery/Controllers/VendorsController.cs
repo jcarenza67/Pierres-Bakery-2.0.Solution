@@ -38,7 +38,7 @@ namespace PierresBakery.Controllers
       return View(model);
     }
 
-    [HttpPost("/vendors/{vendorId}/orders/new")]
+    [HttpPost("/vendors/{vendorId}/orders/create")]
     public ActionResult CreateOrder(int vendorId, string type, string description, string quantity, decimal price, string date)
     {
       

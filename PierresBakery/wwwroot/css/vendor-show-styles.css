@@ -1,0 +1,39 @@
+.order-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.order-list li {
+  margin-bottom: 10px;
+}
+
+.order-link {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.order-link:hover {
+  background-color: #e0e0e0;
+}
+
+.order-type {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-secondary:active {
+  background-color: #444e55;
+}

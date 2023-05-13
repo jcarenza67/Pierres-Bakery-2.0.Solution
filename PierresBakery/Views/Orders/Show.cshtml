@@ -1,21 +1,21 @@
 @{
     Layout = "_Layout";
 }
+<div class="container">
+  <h1 class="page-title">Order Details</h1>
 
-<h1>Order Details</h1>
+  <div class="order-info">
+      <p><strong>Order Type:</strong> @Model["order"].Type</p>
+      <p><strong>Description:</strong> @Model["order"].Description</p>
+      <p><strong>Quantity:</strong> @Model["order"].Quantity</p>
+      <p><strong>Price:</strong> @Model["order"].Price</p>
+      <p><strong>Date:</strong> @Model["order"].Date</p>
+  </div>
 
-<div>
-    <h3>Order Information</h3>
-    <p><strong>Order Type:</strong> @Model["order"].Type</p>
-    <p><strong>Description:</strong> @Model["order"].Description</p>
-    <p><strong>Quantity:</strong> @Model["order"].Quantity</p>
-    <p><strong>Price:</strong> @Model["order"].Price</p>
-    <p><strong>Date:</strong> @Model["order"].Date</p>
+  <div class="vendor-info">
+      <h3>Vendor Information</h3>
+      <p><strong>Vendor Name:</strong> @Model["vendor"].Name</p>
+  </div>
+
+  <a href='/vendors/@Model["vendor"].Id' class="btn btn-primary">Back to Vendor Details</a>
 </div>
-
-<div>
-    <h3>Vendor Information</h3>
-    <p><strong>Vendor Name:</strong> @Model["vendor"].Name</p>
-</div>
-
-<a href='/vendors/@Model["vendor"].Id'>Back to Vendor Details</a>

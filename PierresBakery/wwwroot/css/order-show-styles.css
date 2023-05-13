@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.order-info, .vendor-info {
+  margin-bottom: 30px;
+}
+
+.order-info h3, .vendor-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.order-info p, .vendor-info p {
+  margin-bottom: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff;
+}
+
+.btn-primary:active {
+  background-color: #0056b3;
+}

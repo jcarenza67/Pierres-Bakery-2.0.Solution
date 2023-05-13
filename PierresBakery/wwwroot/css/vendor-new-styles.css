@@ -1,0 +1,35 @@
+.new-vendor {
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.vendor-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0069d9;
+}
+
+.btn:active {
+  background-color: #0056b3;
+}
+

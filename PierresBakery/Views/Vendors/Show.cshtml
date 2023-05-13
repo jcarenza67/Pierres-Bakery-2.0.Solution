@@ -6,12 +6,16 @@
 
 <h3>Here are all the details for this vendor:</h3>
 
-<ol>
+<ol class="order-list">
 @foreach (Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Type</a></li>
+  <li>
+      <a href='/vendors/@Model["vendor"].Id/orders/@order.Id' class="order-link">
+        <div class="order-type">@order.Type</div>
+      </a>
+  </li>
 }
 </ol>
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-<p><a href="/vendors">Return to Vendor list</a></p>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new' class="btn btn-primary">Add a new order</a></p>
+<p><a href="/vendors" class="btn btn-secondary">Return to Vendor list</a></p>
