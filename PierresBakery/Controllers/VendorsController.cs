@@ -24,7 +24,7 @@ namespace PierresBakery.Controllers
     public ActionResult Create(string vendorName, string description)
     {
       Vendor newVendor = new Vendor(vendorName, description);
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/{id}")]
